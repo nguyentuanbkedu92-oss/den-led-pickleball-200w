@@ -729,6 +729,24 @@ footer p{
   display:none;
   z-index:9999;
   border:1px solid rgba(245,166,35,.4);
+
+  animation:fadeUp .5s ease;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
 }
 
 /* ================= VIDEO SECTION ================= */
@@ -882,6 +900,10 @@ footer p{
 
 </style>
 
+
+  
+
+  
 </head>
 
 <body>
@@ -1023,19 +1045,49 @@ const orders = [
 ];
 
 function showOrder(){
-  const box = document.getElementById("orderToast");
 
-  const text = orders[Math.floor(Math.random()*orders.length)];
+  const box =
+  document.getElementById("orderToast");
 
-  box.innerText = "🔥 " + text;
+  const text =
+  orders[Math.floor(Math.random() * orders.length)];
+
+  box.innerText = text;
+
   box.style.display = "block";
 
   setTimeout(()=>{
     box.style.display = "none";
-  }, 4000);
+  }, 5000);
+
 }
 
-setInterval(showOrder, 10000);
+/* RANDOM THỜI GIAN HIỆN */
+
+function randomTime(){
+
+  return Math.floor(
+    Math.random() * 12000
+  ) + 18000;
+
+}
+
+/* LOOP */
+
+function loopToast(){
+
+  showOrder();
+
+  setTimeout(
+    loopToast,
+    randomTime()
+  );
+
+}
+
+/* HIỆN LẦN ĐẦU SAU 10 GIÂY */
+
+setTimeout(loopToast, 10000);
 
 </script>
 
