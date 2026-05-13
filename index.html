@@ -240,6 +240,58 @@ header{
   box-shadow:0 20px 60px rgba(0,0,0,.45);
 }
 
+/* ================= TRUST SECTION ================= */
+
+.trust-section{
+  background:#091524;
+  padding:90px 0;
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  margin-top:50px;
+}
+
+.trust-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;
+  padding:30px;
+  text-align:center;
+  transition:.3s;
+}
+
+.trust-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(245,166,35,.5);
+}
+
+.trust-icon{
+  font-size:42px;
+  margin-bottom:18px;
+}
+
+.trust-card h3{
+  font-size:22px;
+  margin-bottom:12px;
+  color:#f5a623;
+}
+
+.trust-card p{
+  color:rgba(255,255,255,.72);
+  line-height:1.7;
+}
+
+@media(max-width:992px){
+
+.trust-grid{
+  grid-template-columns:1fr;
+}
+
+}
+
 /* FAQ GRID */
 
 .faq-section{
@@ -447,6 +499,88 @@ footer p{
   box-shadow:0 12px 30px rgba(0,104,255,.5);
 }
 
+
+/* ================= MOBILE CTA ================= */
+
+.mobile-cta{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#081321;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  z-index:999999;
+  box-shadow:0 -5px 25px rgba(0,0,0,.4);
+}
+
+.mobile-btn{
+  padding:12px 6px;
+  text-align:center;
+  color:#fff;
+  font-weight:700;
+  font-size:12px;
+  border-right:1px solid rgba(255,255,255,.08);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  white-space:nowrap;
+}
+
+.mobile-btn:last-child{
+  border-right:none;
+}
+
+.call-btn{
+  background:#16a34a;
+}
+
+.call-btn-2{
+  background:#15803d;
+}
+
+.zalo-btn{
+  background:#0068ff;
+}
+
+.quote-btn{
+  background:#f5a623;
+  color:#000;
+}
+
+/* HIỆU ỨNG NHẸ */
+
+.zalo-btn{
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+  transform:scale(1);
+}
+
+50%{
+  transform:scale(1.03);
+}
+
+100%{
+  transform:scale(1);
+}
+
+}
+
+/* MOBILE ONLY */
+
+@media(max-width:768px){
+
+body{
+  padding-bottom:70px;
+}
+
+}
 /* MOBILE */
 
 @media(max-width:992px){
@@ -729,23 +863,66 @@ footer p{
   display:none;
   z-index:9999;
   border:1px solid rgba(245,166,35,.4);
-
-  animation:fadeUp .5s ease;
 }
 
-/* ANIMATION */
+/* ================= PROCESS SECTION ================= */
 
-@keyframes fadeUp{
+.process-section{
+  background:#07111e;
+  padding:90px 0;
+}
 
-  from{
-    opacity:0;
-    transform:translateY(20px);
-  }
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  margin-top:50px;
+}
 
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+.process-card{
+  background:rgba(255,255,255,.04);
+  border-radius:20px;
+  padding:30px;
+  border:1px solid rgba(255,255,255,.08);
+  text-align:center;
+  transition:.3s;
+}
+
+.process-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(245,166,35,.4);
+}
+
+.step-number{
+  width:60px;
+  height:60px;
+  background:#f5a623;
+  color:#000;
+  font-size:28px;
+  font-weight:700;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto auto 20px;
+}
+
+.process-card h3{
+  font-size:22px;
+  margin-bottom:12px;
+  color:#fff;
+}
+
+.process-card p{
+  color:rgba(255,255,255,.7);
+  line-height:1.7;
+}
+
+@media(max-width:992px){
+
+.process-grid{
+  grid-template-columns:1fr;
+}
 
 }
 
@@ -898,12 +1075,256 @@ footer p{
   }
 }
 
+/* ================= HERO PAIN ALERT ================= */
+
+.pain-alert{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin:0 0 30px;
+}
+
+.pain-alert-item{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-left:4px solid #ef4444;
+  padding:16px;
+  border-radius:16px;
+  color:#fff;
+  line-height:1.6;
+  font-size:14px;
+  backdrop-filter:blur(6px);
+}
+
+.pain-alert-item strong{
+  display:block;
+  margin-bottom:4px;
+  font-size:15px;
+}
+
+.pain-alert-item.roi{
+  border-left:4px solid #f5a623;
+  background:rgba(245,166,35,.08);
+}
+
+@media(max-width:768px){
+
+  .pain-alert{
+    grid-template-columns:1fr;
+  }
+
+}
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .pain-alert{
+    grid-template-columns:1fr;
+  }
+
+}
+
+.trust-stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin:45px 0 20px;
+}
+
+.trust-stat{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:28px 20px;
+  text-align:center;
+}
+
+.trust-stat h3{
+  font-size:42px;
+  color:#f5a623;
+  font-family:'Oswald',sans-serif;
+  line-height:1;
+  margin-bottom:10px;
+}
+
+.trust-stat p{
+  color:rgba(255,255,255,.72);
+  font-size:15px;
+}
+
+/* MOBILE */
+
+@media(max-width:992px){
+  .trust-stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+  .trust-stats{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ================= FAQ SALE ================= */
+
+.faq-sale-section{
+  background:#081321;
+  padding:90px 0;
+}
+
+.faq-sale-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:50px;
+}
+
+.faq-sale-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:22px;
+  padding:30px;
+  transition:.35s;
+  position:relative;
+  overflow:hidden;
+}
+
+.faq-sale-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(245,166,35,.45);
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+
+.faq-sale-card h3{
+  font-size:24px;
+  margin-bottom:18px;
+  color:#f5a623;
+  line-height:1.4;
+}
+
+.faq-sale-card p{
+  color:rgba(255,255,255,.78);
+  line-height:1.8;
+  font-size:15px;
+}
+
+.faq-sale-card.highlight{
+  background:
+  linear-gradient(
+    180deg,
+    rgba(245,166,35,.12),
+    rgba(245,166,35,.04)
+  );
+  border:1px solid rgba(245,166,35,.45);
+}
+
+.faq-sale-card.highlight a{
+  display:inline-block;
+  margin-top:20px;
+  background:#f5a623;
+  color:#000;
+  padding:14px 22px;
+  border-radius:12px;
+  font-weight:700;
+  transition:.3s;
+}
+
+.faq-sale-card.highlight a:hover{
+  background:#d2870c;
+  transform:translateY(-2px);
+}
+
+/* MOBILE */
+
+@media(max-width:992px){
+
+  .faq-sale-grid{
+    grid-template-columns:1fr;
+  }
+
+  .faq-sale-card{
+    padding:24px;
+  }
+
+  .faq-sale-card h3{
+    font-size:20px;
+  }
+
+}
+.highlight-faq{
+  border:1px solid rgba(245,166,35,.4);
+  background:rgba(245,166,35,.06);
+}
+
+.compare-box{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin-top:20px;
+}
+
+.compare-item{
+  padding:20px;
+  border-radius:16px;
+}
+
+.compare-item h4{
+  margin-bottom:14px;
+  font-size:18px;
+}
+
+.compare-item ul{
+  padding-left:18px;
+}
+
+.compare-item li{
+  margin-bottom:10px;
+  color:rgba(255,255,255,.78);
+  line-height:1.6;
+}
+
+.compare-item.bad{
+  background:rgba(239,68,68,.08);
+  border:1px solid rgba(239,68,68,.25);
+}
+
+.compare-item.good{
+  background:rgba(34,197,94,.08);
+  border:1px solid rgba(34,197,94,.25);
+}
+
+@media(max-width:768px){
+
+.compare-box{
+  grid-template-columns:1fr;
+}
+
+}
+
+.urgency-note{
+  margin-top:12px;
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:10px;
+  background:rgba(239,68,68,.08);
+  border:1px solid rgba(239,68,68,.35);
+  color:#f87171;
+  font-size:14px;
+  font-weight:600;
+  animation:pulseUrgency 2s infinite;
+}
+
+@keyframes pulseUrgency{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.02);}
+  100%{transform:scale(1);}
+}
+
 </style>
 
 
-  
 
-  
 </head>
 
 <body>
@@ -931,10 +1352,37 @@ Nhận Báo Giá
 
 <div>
 
+<!-- PAIN STRIP -->
+
+
 <div class="hero-badge">
 GIẢI PHÁP CHIẾU SÁNG CHUYÊN PICKLEBALL
 </div>
+<!-- PAIN ALERT -->
 
+<div class="pain-alert">
+
+  <div class="pain-alert-item">
+    <strong>❌ Sân tối</strong><br>
+    Khách chơi khó quan sát ban đêm
+  </div>
+
+  <div class="pain-alert-item">
+    <strong>❌ Ánh sáng không đều</strong><br>
+    Dễ chói mắt khi thi đấu
+  </div>
+
+  <div class="pain-alert-item">
+    <strong>❌ Đèn yếu</strong><br>
+    Khách chơi xong ít quay lại
+  </div>
+
+  <div class="pain-alert-item roi">
+    <strong>💰 Tăng giờ khai thác sân</strong><br>
+    6 bộ đèn 200W giúp sân hoạt động hiệu quả từ 18h–22h
+  </div>
+
+</div>
 <h1>
 Đèn Pha Module
 <span>200W Chống Chói</span>
@@ -952,7 +1400,11 @@ Giá cũ: 2.450.000đ
 </div>
 
 <div class="new-price">
-Giá từ 1.990.000đ
+1.950.000đ
+</div>
+
+<div class="urgency-note">
+⚡ Ưu đãi số lượng có hạn – áp dụng cho đơn đặt trong tuần này
 </div>
 
 <div class="price-note">
@@ -983,6 +1435,7 @@ Nhận Báo Giá Qua Zalo
 
 </a>
 
+
 <a href="#video"
 class="btn btn-outline">
 
@@ -1005,165 +1458,352 @@ alt="Đèn pha module 200w">
 
 </section>
 
+<!-- TRUST SECTION -->
+
+<section class="trust-section">
+
+<div class="container">
+
+<h2 class="section-title">
+Vì Sao Chủ Sân Chọn Thành Đạt LED?
+</h2>
+
+<p class="section-desc">
+Giải pháp chiếu sáng chuyên sân pickleball – hỗ trợ kỹ thuật tận nơi.
+</p>
+
+<div class="trust-stats">
+
+<div class="trust-stat">
+<h3>500+</h3>
+<p>Bộ đèn đã bàn giao</p>
+</div>
+
+<div class="trust-stat">
+<h3>120+</h3>
+<p>+ Công trình sân pickleball thực tế đã thi công</p>
+</div>
+
+<div class="trust-stat">
+<h3>63</h3>
+<p>Tỉnh thành giao hàng</p>
+</div>
+
+<div class="trust-stat">
+<h3>2 Năm</h3>
+<p>Bảo hành chính hãng</p>
+</div>
+
+</div>
+
+<div class="trust-grid">
+
+<div class="trust-card">
+<div class="trust-icon">🏭</div>
+<h3>Xưởng Sản Xuất Trực Tiếp</h3>
+<p>
+Không qua trung gian – giá tốt hơn thị trường.
+</p>
+</div>
+
+<div class="trust-card">
+<div class="trust-icon">📐</div>
+<h3>Hỗ Trợ Layout Miễn Phí</h3>
+<p>
+Tính toán số lượng đèn phù hợp từng sân.
+</p>
+</div>
+
+<div class="trust-card">
+<div class="trust-icon">🚚</div>
+<h3>Giao Hàng Toàn Quốc</h3>
+<p>
+Có hàng nhanh cho công trình gấp.
+</p>
+</div>
+
+<div class="trust-card">
+<div class="trust-icon">🛠️</div>
+<h3>Bảo Hành Tại Xưởng</h3>
+<p>
+Hỗ trợ sửa chữa và kỹ thuật lâu dài.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <!-- CÓ NGƯỜI VỪA ĐẶT HÀNG -->
 
 <div id="orderToast" class="order-toast"></div>
 <script>
 
 const orders = [
+  "Anh Hùng vừa đặt 6 bộ đèn 200W (Hà Nội)",
+  "Chị Mai vừa gửi yêu cầu báo giá sân pickleball",
+  "Anh Tuấn vừa đặt 4 bộ đèn sân tennis (Bắc Ninh)",
+  "Khách tại Bắc Ninh vừa liên hệ Zalo",
+  "Công trình 2 sân vừa được báo giá xong",
 
-  "🏟️ Khách Hà Nội đang nhận layout sân pickleball 2 sân",
-  "💬 Chủ sân tại Bắc Ninh vừa hỏi phương án chống chói",
-  "📐 Thành Đạt LED vừa gửi bố trí đèn cho sân ngoài trời",
-  "🚚 Đơn hàng đèn module 200W đang giao đi Hải Phòng",
-  "⚡ Công trình sân thể thao tại Hà Nam đang thi công",
+  "Anh Long vừa đặt 8 bộ đèn cho sân thể thao (Hà Nam)",
+  "Chị Hạnh vừa hỏi giá lắp 1 sân pickleball",
+  "Anh Dũng vừa chốt đơn 12 bộ đèn module 200W",
+  "Khách Hải Phòng vừa nhận báo giá chi tiết",
+  "Công trình sân tennis 3 sân đang thi công",
 
-  "💡 Khách Nam Định vừa tư vấn ánh sáng 4000K",
-  "🏸 Chủ sân pickleball vừa nhận báo giá 6 bộ đèn",
-  "🔧 Kỹ thuật đang hỗ trợ layout chiếu sáng sân tennis",
-  "📦 Đèn pha module 200W vừa xuất kho đi Quảng Ninh",
-  "🌙 Công trình chiếu sáng sân ban đêm vừa hoàn thiện",
+  "Anh Quân vừa đặt thêm 6 bộ đèn ngoài trời",
+  "Chị Lan vừa yêu cầu thiết kế layout sân",
+  "Khách Nam Định vừa hỏi bảo hành sản phẩm",
+  "Anh Phong vừa chốt 1 sân pickleball 4 bộ đèn",
+  "Công trình vừa hoàn thiện chiếu sáng ban đêm",
 
-  "🏟️ Khách Thanh Hóa đang tư vấn 1 sân pickleball ngoài trời",
-  "💬 Nhà thầu vừa hỏi chiều cao cột phù hợp cho sân",
-  "📐 Layout sân pickleball 4 cột vừa được hoàn tất",
-  "🚛 Đơn đèn sân thể thao đang chuyển đi Bắc Giang",
-  "⚙️ Khách vừa tư vấn driver DONE cho sân ngoài trời",
+  "Khách Hà Nội vừa đặt 10 bộ đèn sân bóng",
+  "Anh Khoa vừa hỏi ánh sáng 4000K vs 6000K",
+  "Chị Thảo vừa gửi yêu cầu khảo sát công trình",
+  "Khách Quảng Ninh vừa xác nhận đơn hàng",
+  "Anh Bình vừa đặt combo 6 đèn + lắp đặt",
 
-  "💡 Chủ sân tại Hải Dương đang so sánh ánh sáng 4000K và 6000K",
-  "🏸 Công trình sân pickleball vừa test ánh sáng ban đêm",
-  "🔍 Khách Hà Nội đang tham khảo phương án 4 bộ đèn / sân",
-  "📞 Thành Đạt LED vừa hỗ trợ kỹ thuật cho công trình mới",
-  "🌧️ Khách vừa hỏi tiêu chuẩn chống nước IP66 ngoài trời",
-
-  "🏟️ Công trình sân tennis tại Bắc Ninh đang lắp đặt",
-  "💬 Chủ đầu tư vừa nhận tư vấn chi phí chiếu sáng sân",
-  "📦 Đơn hàng module chống chói vừa đóng gói xong",
-  "⚡ Khách vừa nhận demo ánh sáng sân pickleball thực tế",
-  "🔧 Kỹ thuật đang hỗ trợ bố trí đèn tiết kiệm điện"
-
+  "Công trình sân mới tại Bắc Giang vừa hoàn tất báo giá",
+  "Khách Thanh Hóa vừa yêu cầu tư vấn kỹ thuật",
+  "Anh Sơn vừa đặt 5 bộ đèn module chống chói"
 ];
 
 function showOrder(){
+  const box = document.getElementById("orderToast");
 
-  const box =
-  document.getElementById("orderToast");
+  const text = orders[Math.floor(Math.random()*orders.length)];
 
-  const text =
-  orders[Math.floor(Math.random() * orders.length)];
-
-  box.innerText = text;
-
+  box.innerText = "🔥 " + text;
   box.style.display = "block";
 
   setTimeout(()=>{
     box.style.display = "none";
   }, 5000);
-
 }
 
-/* RANDOM THỜI GIAN HIỆN */
-
-function randomTime(){
-
-  return Math.floor(
-    Math.random() * 12000
-  ) + 18000;
-
-}
-
-/* LOOP */
-
-function loopToast(){
-
-  showOrder();
-
-  setTimeout(
-    loopToast,
-    randomTime()
-  );
-
-}
-
-/* HIỆN LẦN ĐẦU SAU 10 GIÂY */
-
-setTimeout(loopToast, 10000);
+setInterval(showOrder, 25000);
 
 </script>
 
+<!-- FAQ CHỐT SALE -->
 
-
-<!-- FAQ SECTION -->
-
-<section class="faq-section">
+<section class="faq-sale-section">
 
 <div class="container">
 
 <h2 class="section-title">
-Câu Hỏi Khách Hàng Hay Hỏi
+Giải Đáp Trước Khi Lắp Đèn Sân Pickleball
 </h2>
 
 <p class="section-desc">
-Giải đáp nhanh những thắc mắc khách hàng thường hỏi khi lắp đèn sân pickleball.
+Những câu hỏi khách hàng hỏi nhiều nhất trước khi chốt đèn sân pickleball 200W.
 </p>
 
-<div class="faq-grid">
+<div class="faq-sale-grid">
 
-<div class="faq-card">
-<h3>🏟️ 1 sân cần bao nhiêu đèn?</h3>
+<div class="faq-sale-card">
+
+<h3>💰 1 tháng tốn bao nhiêu tiền điện?</h3>
+
 <p>
-Thông thường từ 4–6 bộ đèn module 200W tùy chiều cao cột và diện tích sân.
+Ví dụ 1 sân dùng 6 bộ đèn 200W = 1.2KW/h.<br><br>
+
+Nếu hoạt động khoảng 4 tiếng/ngày thì tiền điện dao động khoảng:
+<b>120.000đ – 250.000đ/tháng/bộ sân</b>
+tùy giá điện khu vực.
+<br><br>
+
+So với việc dùng đèn metal halide cũ sẽ tiết kiệm điện đáng kể.
 </p>
+
 </div>
 
-<div class="faq-card">
-<h3>💡 Dùng ánh sáng màu gì?</h3>
+<div class="faq-sale-card">
+
+<h3>📏 Cột đèn sân pickleball cao bao nhiêu?</h3>
+
 <p>
-✓ Trung tính 4000K (4C) dịu mắt<br>
-✓ Trắng 6000K (6C) sáng mạnh
+Thông thường:
+<br><br>
+
+✓ Sân pickleball: <b>6–8m</b><br>
+✓ Sân tennis: <b>8–12m</b>
+<br><br>
+
+Thành Đạt LED sẽ hỗ trợ layout miễn phí theo diện tích thực tế để tránh chói và thiếu sáng.
 </p>
+
 </div>
 
-<div class="faq-card">
-<h3>😎 Đèn có chống chói không?</h3>
+<div class="faq-sale-card">
+
+<h3>🛠️ Có hỗ trợ lắp đặt không?</h3>
+
 <p>
-Thiết kế module chống chói chuyên sân thể thao giúp ánh sáng đều hơn.
+Có hỗ trợ kỹ thuật từ xa qua Zalo/video call.
+<br><br>
+
+Đối với công trình lớn:
+<br>
+✓ Hỗ trợ layout chiếu sáng<br>
+✓ Hướng dẫn đấu nối<br>
+✓ Hỗ trợ đơn vị thi công
 </p>
+
 </div>
 
-<div class="faq-card">
-<h3>🌧️ Có chống nước ngoài trời?</h3>
+<div class="faq-sale-card">
+
+<h3>⚠️ Đèn giá rẻ khác gì?</h3>
+
 <p>
-Đạt chuẩn IP66 chống nước và chống bụi ngoài trời.
+Nhiều loại đèn giá rẻ ngoài thị trường:
+<br><br>
+
+✗ Ánh sáng nhanh suy hao<br>
+✗ Driver yếu dễ cháy<br>
+✗ Chói mắt khi thi đấu<br>
+✗ Không có linh kiện thay thế
+<br><br>
+
+TDL sản xuất trực tiếp nên dễ bảo hành và sửa chữa lâu dài.
 </p>
+
 </div>
 
-<div class="faq-card">
-<h3>🛠️ Bảo hành bao lâu?</h3>
+<div class="faq-sale-card">
+
+<h3>🔧 Hết bảo hành nếu hỏng thì sao?</h3>
+
 <p>
-Bảo hành chính hãng 2 năm, hỗ trợ kỹ thuật nhanh.
+Sau bảo hành vẫn hỗ trợ:
+<br><br>
+
+✓ Sửa chữa tại xưởng<br>
+✓ Thay driver/chip LED<br>
+✓ Hỗ trợ linh kiện
+<br><br>
+
+Không phải bỏ toàn bộ đèn như nhiều dòng nhập khẩu trôi nổi.
 </p>
+
 </div>
 
-<div class="faq-card">
-<h3>🏭 Có sửa chữa tại xưởng?</h3>
+<div class="faq-sale-card">
+
+<h3>📐 Lắp đèn như nào để không bị chói?</h3>
+
 <p>
-Có. Thành Đạt LED trực tiếp sản xuất và sửa chữa tại xưởng.
+
+Thông thường sân pickleball sẽ bố trí:
+<br><br>
+
+✓ 4–6 bộ đèn cho 1 sân<br>
+✓ Cột cao khoảng 6–8m<br>
+✓ Góc chiếu lệch ra ngoài sân để giảm chói trực diện
+
+<br><br>
+
+Đèn module chống chói sẽ giúp:
+<br><br>
+
+✓ Ánh sáng đều sân hơn<br>
+✓ Hạn chế lóa mắt khi nhìn bóng cao<br>
+✓ Tăng trải nghiệm chơi ban đêm
+
+<br><br>
+
+Thành Đạt LED hỗ trợ layout miễn phí theo kích thước sân thực tế.
+
 </p>
+
 </div>
 
-<div class="faq-card">
-<h3>🚚 Bao lâu có hàng?</h3>
+<!-- FAQ MỚI 1 -->
+
+<div class="faq-sale-card">
+
+<h3>🌈 Nên chọn ánh sáng gì?</h3>
+
 <p>
-Thông thường từ 2 ngày là có hàng sẵn giao.
+
+Thông thường sân pickleball nên dùng:
+
+<br><br>
+
+✓ <b>4000K (trung tính)</b> → dịu mắt, dễ quan sát bóng, phù hợp sân chuyên nghiệp
+
+<br><br>
+
+✓ <b>6000K (trắng)</b> → sáng mạnh hơn, phù hợp sân ngoài trời cần độ sáng cao
+
+<br><br>
+
+✓ <b>3000K (vàng)</b> → ít dùng cho sân thể thao vì ánh sáng không rõ bóng bằng
+
+<br><br>
+
+Thành Đạt LED sẽ hỗ trợ tư vấn nhiệt độ màu phù hợp theo diện tích và chiều cao cột thực tế.
+
 </p>
+
 </div>
 
-<div class="faq-card">
-<h3>📐 Có hỗ trợ layout?</h3>
+<div class="faq-sale-card">
+
+<h3>⏳ Đèn dùng được bao lâu?</h3>
+
 <p>
-Hỗ trợ bố trí đèn và layout sân miễn phí.
+
+Đèn pha module 200W TDL có tuổi thọ khoảng:
+
+<br><br>
+
+✓ ~50.000 giờ sử dụng<br>
+✓ Hoạt động ổn định ngoài trời<br>
+✓ Phù hợp sân thể thao bật liên tục ban đêm
+
+<br><br>
+
+Driver DONE và chip LED SMD giúp đèn:
+
+<br><br>
+
+✓ Ít suy hao ánh sáng<br>
+✓ Hạn chế nhấp nháy<br>
+✓ Tiết kiệm chi phí bảo trì
+
+<br><br>
+
+TDL sản xuất trực tiếp nên dễ sửa chữa và thay linh kiện khi cần.
+
 </p>
+
+</div>
+
+<div class="faq-sale-card highlight">
+
+<h3>📩 Chưa biết chọn loại nào?</h3>
+
+<p>
+Chỉ cần gửi:
+<br><br>
+
+✓ Kích thước sân<br>
+✓ Số sân<br>
+✓ Chiều cao cột hiện có
+<br><br>
+
+Thành Đạt LED sẽ hỗ trợ layout và báo giá phù hợp miễn phí.
+</p>
+
+<a href="https://zalo.me/0986474671" target="_blank">
+Nhận tư vấn ngay
+</a>
+
 </div>
 
 </div>
@@ -1172,24 +1812,6 @@ Hỗ trợ bố trí đèn và layout sân miễn phí.
 
 </section>
 
-<!-- CTA -->
- <div class="spec-cta">
-
-  <p>👉 Cần thiết kế ánh sáng chuẩn cho sân pickleball?</p>
-
-  <p style="margin-bottom:15px;color:rgba(255,255,255,.7);">
-    Thành Đạt LED hỗ trợ miễn phí layout + báo giá trực tiếp tại xưởng
-  </p>
-
-  <a href="https://zalo.me/0986474671" class="btn-spec">
-    📩 Nhận Báo Giá & Tư Vấn Ngay
-  </a>
-
-</div>
-
-  </div>
-
-</section>
 
 <!-- PRODUCT SECTION -->
 
@@ -1253,79 +1875,63 @@ Hình ảnh thực tế đèn pha module 200W chuyên sân pickleball.
 </div>
 </section>
 
-<!-- SPEC SECTION -->
+<!-- PROCESS SECTION -->
 
-<section class="spec-section" id="thong-so">
+<section class="process-section">
 
-  <div class="container">
+<div class="container">
 
-    <h2 class="section-title">
-      Thông Số Kỹ Thuật Đèn Pha Module 200W TDL
-    </h2>
+<h2 class="section-title">
+Quy Trình Tư Vấn & Báo Giá
+</h2>
 
-    <p class="section-desc">
-      Thiết kế chuyên dụng cho sân thể thao ngoài trời – ánh sáng mạnh, ổn định, tiết kiệm điện và độ bền cao.
-    </p>
+<p class="section-desc">
+Hỗ trợ khách hàng nhanh qua Zalo – từ layout đến báo giá.
+</p>
 
-    <div class="spec-grid">
+<div class="process-grid">
 
-      <div class="spec-card">
-        <h3>⚡ Công Suất</h3>
-        <p><b>200W</b> – phù hợp sân pickleball, tennis, sân thể thao ngoài trời</p>
-      </div>
+<div class="process-card">
+<div class="step-number">1</div>
+<h3>Gửi Thông Tin Sân</h3>
+<p>
+Gửi kích thước sân hoặc ảnh thực tế qua Zalo.
+</p>
+</div>
 
-      <div class="spec-card">
-        <h3>💡 Hiệu Suất Phát Quang</h3>
-        <p>120 – 130 lm/W<br><b>Quang thông: 24.000 – 26.000 lm</b></p>
-      </div>
+<div class="process-card">
+<div class="step-number">2</div>
+<h3>Lên Layout Chiếu Sáng</h3>
+<p>
+Tính số lượng đèn và chiều cao cột phù hợp.
+</p>
+</div>
 
-      <div class="spec-card">
-        <h3>🔆 Chip LED</h3>
-        <p>SMD hiệu suất cao – ánh sáng mạnh, đều, ổn định lâu dài</p>
-      </div>
+<div class="process-card">
+<div class="step-number">3</div>
+<h3>Nhận Báo Giá</h3>
+<p>
+Báo giá trực tiếp từ xưởng sản xuất.
+</p>
+</div>
 
-      <div class="spec-card">
-        <h3>⚙️ Driver</h3>
-        <p>DONE – dòng điện ổn định, chống nhấp nháy, tăng tuổi thọ đèn</p>
-      </div>
+<div class="process-card">
+<div class="step-number">4</div>
+<h3>Hỗ Trợ Kỹ Thuật</h3>
+<p>
+Hướng dẫn lắp đặt và hỗ trợ sau bán hàng.
+</p>
+</div>
 
-      <div class="spec-card">
-        <h3>🌈 Nhiệt Độ Màu</h3>
-        <p>
-          • 3000K – Vàng ấm<br>
-          • 4000K – Trung tính<br>
-          • 6000K – Trắng sáng
-        </p>
-      </div>
+</div>
 
-      <div class="spec-card">
-        <h3>🎯 Chỉ Số Hoàn Màu</h3>
-        <p>CRI ≥ 80 – ánh sáng trung thực, nhìn rõ vật thể khi thi đấu</p>
-      </div>
+</div>
 
-      <div class="spec-card">
-        <h3>⏳ Tuổi Thọ</h3>
-        <p><b>~50.000 giờ</b> – hoạt động bền bỉ, giảm chi phí thay thế</p>
-      </div>
+</section>
 
-      <div class="spec-card">
-        <h3>🧱 Vật Liệu</h3>
-        <p>Hợp kim nhôm cao cấp – tản nhiệt nhanh, chống oxy hóa ngoài trời</p>
-      </div>
 
-      <div class="spec-card">
-        <h3>📏 Kích Thước</h3>
-        <p>305 × 315 × 125 mm<br>Trọng lượng: 4kg</p>
-      </div>
 
-      <div class="spec-card highlight">
-        <h3>Sản Xuất Tại Việt Nam </h3>
-        <p><b>Thành Đạt LED -  TDL Factory</b><br>Giá trực tiếp tại xưởng – không qua trung gian</p>
-      </div>
 
-    </div>
-
-  
 <!-- VIDEO SECTION -->
 
 <section id="video" class="video-section">
@@ -1476,13 +2082,103 @@ Sản xuất trực tiếp tại xưởng – bảo hành nhanh – hỗ trợ k
 
 </section>
 
+<!-- SPEC SECTION -->
+
+<section class="spec-section" id="thong-so">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Thông Số Kỹ Thuật Đèn Pha Module 200W TDL
+    </h2>
+
+    <p class="section-desc">
+      Thiết kế chuyên dụng cho sân thể thao ngoài trời – ánh sáng mạnh, ổn định, tiết kiệm điện và độ bền cao.
+    </p>
+
+    <div class="spec-grid">
+
+      <div class="spec-card">
+        <h3>⚡ Công Suất</h3>
+        <p><b>200W</b> – phù hợp sân pickleball, tennis, sân thể thao ngoài trời</p>
+      </div>
+
+      <div class="spec-card">
+        <h3>💡 Hiệu Suất Phát Quang</h3>
+        <p>120 – 130 lm/W<br><b>Quang thông: 24.000 – 26.000 lm</b></p>
+      </div>
+
+      <div class="spec-card">
+        <h3>🔆 Chip LED</h3>
+        <p>SMD hiệu suất cao – ánh sáng mạnh, đều, ổn định lâu dài</p>
+      </div>
+
+      <div class="spec-card">
+        <h3>⚙️ Driver</h3>
+        <p>DONE – dòng điện ổn định, chống nhấp nháy, tăng tuổi thọ đèn</p>
+      </div>
+
+      <div class="spec-card">
+        <h3>🌈 Nhiệt Độ Màu</h3>
+        <p>
+          • 3000K – Vàng ấm<br>
+          • 4000K – Trung tính<br>
+          • 6000K – Trắng sáng
+        </p>
+      </div>
+
+      <div class="spec-card">
+        <h3>🎯 Chỉ Số Hoàn Màu</h3>
+        <p>CRI ≥ 80 – ánh sáng trung thực, nhìn rõ vật thể khi thi đấu</p>
+      </div>
+
+      <div class="spec-card">
+        <h3>⏳ Tuổi Thọ</h3>
+        <p><b>~50.000 giờ</b> – hoạt động bền bỉ, giảm chi phí thay thế</p>
+      </div>
+
+      <div class="spec-card">
+        <h3>🧱 Vật Liệu</h3>
+        <p>Hợp kim nhôm cao cấp – tản nhiệt nhanh, chống oxy hóa ngoài trời</p>
+      </div>
+
+      <div class="spec-card highlight">
+        <h3>Sản Xuất Tại Việt Nam </h3>
+        <p><b>Thành Đạt LED -  TDL Factory</b><br>Giá trực tiếp tại xưởng – không qua trung gian</p>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+   <div class="spec-cta">
+
+  <p>👉 Cần thiết kế ánh sáng chuẩn cho sân pickleball?</p>
+
+  <p style="margin-bottom:15px;color:rgba(255,255,255,.7);">
+    Thành Đạt LED hỗ trợ miễn phí layout + báo giá trực tiếp tại xưởng
+  </p>
+
+  <a href="https://zalo.me/0986474671" class="btn-spec">
+    📩 Nhận Báo Giá & Tư Vấn Ngay
+  </a>
+
+</div>
+
+  </div>
+
+</section>
+
+
 <!-- POPUP -->
 
 <div id="popup" class="popup-overlay">
   <div class="popup-box">
 
-    <h3>💡 Nhận Báo Giá Nhanh</h3>
-    <p>Thành Đạt LED hỗ trợ tư vấn & layout miễn phí cho sân pickleball</p>
+    <h3>📐 Nhận Layout Chiếu Sáng Miễn Phí</h3>
+
+<p>
+Gửi kích thước sân — Thành Đạt LED hỗ trợ bố trí đèn phù hợp miễn phí
+</p>
 
     <a href="https://zalo.me/0986474671" target="_blank">
       Nhận tư vấn ngay
@@ -1713,6 +2409,30 @@ function closePopup(){
 
 </script>
 
+<script>
+
+/* POPUP SCROLL TRIGGER */
+
+let shown = false;
+
+window.addEventListener('scroll', () => {
+
+  const scrollPercent =
+  window.scrollY /
+  (document.body.scrollHeight - window.innerHeight);
+
+  if(!shown && scrollPercent > 0.6){
+
+    document.getElementById('popup').style.display = 'flex';
+
+    shown = true;
+  }
+
+});
+
+</script> 
+
+
 <footer>
 
 <p>
@@ -1724,7 +2444,7 @@ Số 938 đường Quang Trung, Phường Yên Nghĩa, TP Hà Nội, Việt Nam
 </p>
 
 <p>
-Hotline / Zalo: 0986.474.671
+Hotline / Zalo: 0986.474.671 - Website : https://tdllighting.com/
 </p>
 
 </footer>
@@ -1739,6 +2459,30 @@ target="_blank">
 </a>
 
 </div>
+
+<!-- MOBILE CTA -->
+
+<div class="mobile-cta">
+
+<a href="tel:0986474671" class="mobile-btn call-btn">
+📞 0986.474.671
+</a>
+
+<a href="tel:0867933396" class="mobile-btn call-btn-2">
+📞 0867.933.396
+</a>
+
+<a href="https://zalo.me/0986474671"
+target="_blank"
+class="mobile-btn zalo-btn">
+
+💬 Zalo
+
+</a>
+
+</div>
+
+
 
 </body>
 </html>
